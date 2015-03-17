@@ -1,0 +1,29 @@
+{
+  "name": "Planner",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "plans": {
+      "type": "hasMany",
+      "model": "Plan",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

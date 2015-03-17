@@ -1,0 +1,42 @@
+{
+  "name": "Plan",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "callType": {
+      "type": "string",
+      "required": true
+    },
+    "ment": {
+      "type": "object",
+      "required": true
+    },
+    "scheduledAt": {
+      "type": "date",
+      "required": true
+    },
+    "repeat": {
+      "type": "string",
+      "required": true
+    },
+    "enabled": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "planner": {
+      "type": "belongsTo",
+      "model": "Planner",
+      "foreignKey": "plannerId"
+    },
+    "attendants": {
+      "type": "hasAndBelongsToMany",
+      "model": "Attendant",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

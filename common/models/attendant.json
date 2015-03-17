@@ -1,0 +1,29 @@
+{
+  "name": "Attendant",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "attendantName": {
+      "type": "object",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "enabled": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "plans": {
+      "type": "hasAndBelongsToMany",
+      "model": "Plan",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}
